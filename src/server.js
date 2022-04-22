@@ -32,9 +32,8 @@ console.log('database connected successfully')
   app.patch('/api/v1/cardAll/:id', updateCard)
   app.post('/api/v1/users', createUsers)
   app.get('/api/v1/users/:email', getUsers)
-  app.patch('/api/v1/users/:email', updateUsers)
+  app.patch ('/api/v1/users/:email', updateUsers)
  
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

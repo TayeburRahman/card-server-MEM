@@ -27,5 +27,3 @@ const cardModel = new mongoose.Schema({
  
 })
 module.exports = mongoose.model('allCard', cardModel)
-
- 

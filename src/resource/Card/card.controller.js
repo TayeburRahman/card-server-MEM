@@ -46,8 +46,6 @@ const cardModel = require("./card.model")
           .status(500).json({massages: error.massages}) 
   }
 };
-
-
  
  
   module.exports={getCard , createCard, updateCard, deleteCard}
