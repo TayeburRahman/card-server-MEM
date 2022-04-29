@@ -13,7 +13,7 @@ const createOrder= async (req, res) => {
 
  const getOrder = async (req, res) => {
       try {
-        const order = await  ordersModel.findOne({
+        const order = await  ordersModel.find({
           email: req.params.email
         })
         return res.status(201).json({order})
@@ -33,7 +33,7 @@ const createOrder= async (req, res) => {
       res.status(201).json({massages:'Card Updated Successfully'});
   } catch (error) {
       return res
-          .status(500).json({massages: error.massages}) 
+          .status(500).json({massages: error.massages})
   }
 };
 
