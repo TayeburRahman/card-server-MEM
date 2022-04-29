@@ -43,8 +43,7 @@ const deleteSubmit = async (req, res) => {
       return res.status(201).json({massages:'Card deleted Successfully'});
   } catch (error) {
       return res
-          .status(500).json({massages: error.massages})
-       
+          .status(500).json({massages: error.massages}) 
   }
 };
 

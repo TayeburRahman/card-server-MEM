@@ -19,7 +19,9 @@
     "helmet": "^5.0.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.0",
+    "mongoose-stripe-customers": "^0.4.0",
     "morgan": "^1.10.0",
-    "multer": "^1.4.4"
+    "multer": "^1.4.4",
+    "stripe": "^8.219.0"
   }
 }

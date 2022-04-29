@@ -13,7 +13,14 @@ const ordersModel = new mongoose.Schema(
             trim: true,
             required:true
         },
-        updated: { type: Date, default: Date.now },
+        updated: { 
+          type: Date, 
+          default: Date.now 
+        },
+        status: {
+          type:String,
+          require:true
+        },
         }
     );
      

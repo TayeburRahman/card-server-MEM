@@ -6,12 +6,12 @@ const app = express()
 const port = process.env.PORT || 3000 ;
 
 // response step : 1.1
-const { getProduct, postProduct, updateProduct, deleteProduct } = require('./resource/product/product.controller')
 const { createCard, getCard, deleteCard, updateCard  } = require('./resource/Card/card.controller')
 const { createUsers, updateUsers, getUsers } = require('./resource/auth/user.controller')
 const { createSubmit, getSubmit, updateSubmit, deleteSubmit } = require('./resource/submit/submit.controller')
 const { updateOrder, getOrder, createOrder } = require('./resource/Orders/order.controller')
-
+const { createStripe } = require('./resource/stripe/stripe.controller')
+ 
 
 app.use(cors())
 app.use(express.json())
@@ -25,9 +25,6 @@ console.log('database connected successfully')
 })
 
 // response step : 1
-  app.get('/api/v1/product', getProduct)
-  app.post('/api/v1/product', postProduct) 
-  app.delete('/api/v1/product', deleteProduct)
 
   app.post('/api/v1/cardAll', createCard)
   app.get('/api/v1/cardAll', getCard)
@@ -47,6 +44,9 @@ console.log('database connected successfully')
   app.get('/api/v1/order/:email', getOrder)
   app.patch ('/api/v1/order/:email', updateOrder) 
 
+
+  app.post('/api/v1/create_payment', createStripe)
+  // app.get('/api/v1/order/:email', getOrder)
  
 
 app.listen(port, () => {
