@@ -12,7 +12,6 @@ const { createSubmit, getSubmit, updateSubmit, deleteSubmit } = require('./resou
 const { updateOrder, getOrder, createOrder } = require('./resource/Orders/order.controller')
 const { createStripe } = require('./resource/stripe/stripe.controller')
  
-
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
